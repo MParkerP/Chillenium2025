@@ -559,6 +559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38755f2a052e07443adcfffd72fcfcf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnBudget: 0
 --- !u!4 &1019603180
 Transform:
   m_ObjectHideFlags: 0
@@ -848,10 +849,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacles: []
-  smallBird: {fileID: 7664933524408519649, guid: 52313903f5c70ad46bf2cd48f75e2731, type: 3}
   smallBirdSpawnLocation: {x: 0, y: 0}
-  smallBirdDangerIncrement: 0
-  smallBirdPassiveDangerFactor: 10
+  smallBird:
+    obstacle: {fileID: 7664933524408519649, guid: 52313903f5c70ad46bf2cd48f75e2731, type: 3}
+    passiveDangerFactor: 10
+    instantDangerIncrement: 0
+  bigBirdSpawnPostion: {x: 0, y: 0}
+  bigBird:
+    obstacle: {fileID: 5378750470347637857, guid: 6b0fa7f920307b549975c618799d3548, type: 3}
+    passiveDangerFactor: 20
+    instantDangerIncrement: 0
 --- !u!1 &1907553064
 GameObject:
   m_ObjectHideFlags: 0
