@@ -11,11 +11,23 @@ public class DangerLevelManager : MonoBehaviour
     [SerializeField] private float maxDanger;
     [SerializeField] private float startingDanger = 0;
     [SerializeField] private float totalPassiveDangerFactor = 0;
+    [SerializeField] private float passiveDangerScaler;
+    [SerializeField] private float passiveDangerDecayIncr;
 
     private void Start()
     {
         slider.value = startingDanger;
         slider.maxValue = maxDanger;
+    }
+
+    private void FixedUpdate()
+    {
+        slider.value += totalPassiveDangerFactor * passiveDangerScaler;
+
+        if (totalPassiveDangerFactor <= 0)
+        {
+            slider.value -= passiveDangerDecayIncr * passiveDangerScaler;
+        }
     }
 
     public void IncreaseDangerLevelOnce(float dangerIncrement)
@@ -31,12 +43,17 @@ public class DangerLevelManager : MonoBehaviour
     public void RecieveNewObstacle(float dangerIncrementInstant, float passiveDangerFactor)
     {
         IncreaseDangerLevelOnce(dangerIncrementInstant);
-
+        IncreasePassiveDangerFactor(passiveDangerFactor);
     }
 
     public void IncreasePassiveDangerFactor(float dangerFactor)
     {
         totalPassiveDangerFactor += dangerFactor;
+    }
+
+    public void DecreasePassiveDangerFactor(float dangerFactor)
+    {
+        totalPassiveDangerFactor -= dangerFactor;
     }
 
 

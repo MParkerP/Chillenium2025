@@ -1,17 +1,17 @@
-using System;
 using UnityEngine;
 
-[Serializable]
-public class GenericObstacle
+public class GenericObstacle : MonoBehaviour
 {
-    string obstacleName;
-    float passiveDangerFactor;
-    float instantDangerIncrement;
+    DangerLevelManager dangerLevelManager;
+    [SerializeField] private float passiveDangerFactor;
 
-    public GenericObstacle(string obstacleName, float passiveDangerFactor, float instantDangerIncrement)
+    private void Start()
     {
-        this.obstacleName = obstacleName;
-        this.passiveDangerFactor = passiveDangerFactor;
-        this.instantDangerIncrement = instantDangerIncrement;
+        dangerLevelManager = GameObject.Find("DangerLevelManager").GetComponent<DangerLevelManager>();
+    }
+
+    private void OnDestroy()
+    {
+        dangerLevelManager.DecreasePassiveDangerFactor(passiveDangerFactor);
     }
 }
