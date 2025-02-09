@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 8a296156b7244a643af85c78f41267e0
+guid: a1993900cdce43949b9b389dc2b0443a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8637658112001971091
-    second: CockPit_0
+      213: 2800216144224587428
+    second: WalkieTalkie_0
+  - first:
+      213: 9049628986510026454
+    second: WalkieTalkie_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CockPit_0
+      name: WalkieTalkie_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 7
+        y: 143
+        width: 149
+        height: 134
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +144,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d6ce9de16bfd02880800000000000000
-      internalID: -8637658112001971091
+      spriteID: 4ae02da3fbd5cd620800000000000000
+      internalID: 2800216144224587428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkieTalkie_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 3
+        width: 141
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d62202cd9db69d70800000000000000
+      internalID: 9049628986510026454
       vertices: []
       indices: 
       edges: []
@@ -161,7 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      CockPit_0: -8637658112001971091
+      WalkieTalkie_0: 2800216144224587428
+      WalkieTalkie_1: 9049628986510026454
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

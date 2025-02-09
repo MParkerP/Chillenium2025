@@ -39,6 +39,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Sky
+    uniqueID: 196747619
+    locked: 0
+  - name: BehindCockpit
+    uniqueID: 865703517
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

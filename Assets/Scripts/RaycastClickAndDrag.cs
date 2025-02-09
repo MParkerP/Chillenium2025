@@ -31,9 +31,13 @@ public class RaycastClickAndDrag : MonoBehaviour
         if (Input.GetButtonUp("Fire1"))
         {
             holding = false;
-            Transform t = colliderHit.transform;
-            Vector3 mouse = GetMouseWorldPosition();
-            colliderHit.attachedRigidbody.linearVelocity = new Vector2(mouse.x - t.position.x, mouse.y - t.position.y) * 25;
+            Transform t = null;
+            if (colliderHit != null)
+            {
+                t = colliderHit.transform;
+                Vector3 mouse = GetMouseWorldPosition();
+                colliderHit.attachedRigidbody.linearVelocity = new Vector2(mouse.x - t.position.x, mouse.y - t.position.y) * 25;
+            }
             // colliderHit.attachedRigidbody.gravityScale = 1;
         }
 
