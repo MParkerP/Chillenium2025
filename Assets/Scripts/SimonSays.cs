@@ -24,16 +24,6 @@ public class SimonSays : MonoBehaviour
         InputSequence = "";
         sequence = generateSequence();
         raiseAll();
-        enabled = false;
-        StartCoroutine(triggerFlash());
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            enabled = true;
-        }
     }
 
 
@@ -89,6 +79,7 @@ public class SimonSays : MonoBehaviour
     {
         //keep buttons depressed
         Debug.Log("You won shape game");
+        StopAllCoroutines();
     }
 
     private void lose()
@@ -145,6 +136,7 @@ public class SimonSays : MonoBehaviour
     {
         enabled = true;
         generateSequence();
+        StartCoroutine(triggerFlash());
         raiseAll();
     }
 
