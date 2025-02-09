@@ -9,6 +9,7 @@ public class Eraseable : MonoBehaviour
     public Color color;
     public AudioClip squeak;
 
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
