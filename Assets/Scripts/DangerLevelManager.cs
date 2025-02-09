@@ -22,12 +22,12 @@ public class DangerLevelManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        slider.value += totalPassiveDangerFactor * passiveDangerScaler;
+       // slider.value += totalPassiveDangerFactor * passiveDangerScaler;
 
-        if (totalPassiveDangerFactor <= 0)
+/*        if (totalPassiveDangerFactor <= 0)
         {
             slider.value -= passiveDangerDecayIncr * passiveDangerScaler;
-        }
+        }*/
     }
 
     public void IncreaseDangerLevelOnce(float dangerIncrement)

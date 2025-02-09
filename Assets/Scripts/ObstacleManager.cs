@@ -8,12 +8,18 @@ public class ObstacleManager : MonoBehaviour
 {
     [SerializeField] private List<GameObject> obstacles;
 
-    [SerializeField] private float leftMostX;
+    //BirdLimits
+    [SerializeField] private float leftMostX; 
     [SerializeField] private float rightMostX;
     [SerializeField] private float lowerMostY;
     [SerializeField] private float upperMostY;
 
-    [SerializeField] public enum dangerFactors {smallBird = 10, bigBird = 20 };
+    [SerializeField] private float dropletleftMostX;
+    [SerializeField] private float dropletrightMostX;
+    [SerializeField] private float dropletowerMostY;
+    [SerializeField] private float dropletupperMostY;
+
+    [SerializeField] public enum dangerFactors {smallBird = 10, bigBird = 20, droplet = 1 };
 
     [SerializeField] private static GameObject smallBirdObject;
     [SerializeField] private Vector2 smallBirdSpawnLocation;
@@ -28,7 +34,14 @@ public class ObstacleManager : MonoBehaviour
     [SerializeField] private Vector2 bigBirdSpawnPostion;
 
     [SerializeField] private GenericObstacle bigBird = new GenericObstacle(bigBirdObject, bigBirdpassiveDangerFactor, bigBirdInstantDangerIncrement);
-    
+
+    [SerializeField] private static GameObject dropletObject;
+    [SerializeField] private static float dropletpassiveDangerFactor;
+    [SerializeField] private static float dropletInstantDangerIncrement;
+    [SerializeField] private Vector2 dropletSpawnPostion;
+
+    [SerializeField] private GenericObstacle droplet = new GenericObstacle(dropletObject, dropletpassiveDangerFactor, dropletInstantDangerIncrement);
+
 
     private DangerLevelManager dangerLevelManager;
 
@@ -46,6 +59,7 @@ public class ObstacleManager : MonoBehaviour
 
         if(Input.GetKeyUp(KeyCode.B)) { Spawn_GenericObstacle(smallBird, smallBirdSpawnLocation); }
         if(Input.GetKeyUp(KeyCode.H)) { randomSpawn_GenericObstacle(bigBird); }
+        if(Input.GetKeyUp(KeyCode.W)) { randomSpawn_GenericObstacle(droplet,-8.7f,8.7f,-0.3f,5); }
     }
 
     /*public GameObject Spawn_SmallBird()
@@ -81,7 +95,7 @@ public class ObstacleManager : MonoBehaviour
         return thisObject;
     }
 
-    public GameObject randomSpawn_GenericObstacle(GenericObstacle obstacle)
+    public GameObject randomSpawn_GenericObstacle(GenericObstacle obstacle, float leftMostX = -8,float rightMostX = 8,float lowerMostY = 0, float upperMostY = 4)
     {
         float randomx = UnityEngine.Random.Range(leftMostX, rightMostX);
         float randomy = UnityEngine.Random.Range(lowerMostY, upperMostY);
