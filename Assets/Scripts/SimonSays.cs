@@ -13,11 +13,16 @@ public class SimonSays : MonoBehaviour
     public int simonLength;
     private string sequence;
     private string InputSequence;
+    [SerializeField] private ShapeButton s;
+    [SerializeField] private ShapeButton d;
+    [SerializeField] private ShapeButton t;
+    [SerializeField] private ShapeButton c;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         InputSequence = "";
         sequence = generateSequence();
+        raiseAll();
     }
 
 
@@ -37,8 +42,8 @@ public class SimonSays : MonoBehaviour
                 default: break;
             }
         }
-        Debug.Log("Looking for: " + sequenceString);
-        return sequenceString;
+        //Debug.Log("Looking for: " + sequenceString);
+        return "cstd";
     }
 
     public void recieveInput(string color)
@@ -62,6 +67,7 @@ public class SimonSays : MonoBehaviour
         if (string.Equals(input, sequence.Substring(0, input.Length)))
         {
             if (input.Length == simonLength) { win(); }
+
             return;
 
         }
@@ -83,6 +89,15 @@ public class SimonSays : MonoBehaviour
         //lift up the buttons
         Debug.Log("You lost");
         InputSequence = "";
+        raiseAll();
     }
 
+
+    private void raiseAll()
+    {
+        t.raise();
+        s.raise();
+        c.raise();
+        d.raise();
+    }
 }

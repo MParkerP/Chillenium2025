@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Squeegie_0: 8256209651118093435
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
