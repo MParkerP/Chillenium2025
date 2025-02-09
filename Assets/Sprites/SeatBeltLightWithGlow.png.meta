@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SeatBeltLightWithGlow_0: 2992092195534825252
+      SeatBeltLightWithGlow_1: -8435571166418754019
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

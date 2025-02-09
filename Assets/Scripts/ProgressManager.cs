@@ -11,14 +11,19 @@ public class ProgressManager : MonoBehaviour
     public GameObject largeBirdPrefab;
     public GameObject mudPrefab;
 
+    public AudioClip windowThud;
+    public AudioClip mudSplat;
+    private AudioSource audioSource;
 
-    private float timer = 0f;
+
+    public float timer = 0f;
 
 
     const int SMALL_BIRD_TIME = 0; bool smallBirdOn = false;
     const int LARGE_BIRD_TIME = 30; bool largeBirdOn = false;
     const int MUD_TIME = 60; bool mudOn = false;
     const int CHECKPOINT1_END = 90; bool check1On = false;
+
     const int SEAT_BELT_TIME = 150; bool seatBeltOn = false;
     const int SIMON_SAYS_TIME = 165; bool simonOn = false;
     const int PASSWORD_TIME = 285; bool password = false;
@@ -30,6 +35,7 @@ public class ProgressManager : MonoBehaviour
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         obstacleManager = GameObject.Find("ObstacleManager").GetComponent<ObstacleManager>();
     }
 
@@ -41,7 +47,20 @@ public class ProgressManager : MonoBehaviour
 
             if (timer >= SMALL_BIRD_TIME && !smallBirdOn)
             {
+                smallBirdOn = true;
                 StartCoroutine(SmallBird());
+            }
+
+            if (timer >= LARGE_BIRD_TIME && !largeBirdOn)
+            {
+                largeBirdOn = true;
+                StartCoroutine(LargeBird());
+            }
+
+            if (timer >= MUD_TIME && !mudOn)
+            {
+                mudOn = true;
+                StartCoroutine(Mud());
             }
         }
     }
@@ -54,15 +73,49 @@ public class ProgressManager : MonoBehaviour
 
     IEnumerator SmallBird()
     {
-        float spawnChance = 0.33f;
-        float spawnChanceInterval = 3f;
-        if (Random.value < spawnChance)
+        while (true)
         {
-            obstacleManager.randomSpawn_GenericObstacle(obstacleManager.smallBird);
+            float spawnChance = 0.5f;
+            float spawnChanceInterval = 2f;
+            if (Random.value < spawnChance)
+            {
+                obstacleManager.randomSpawn_GenericObstacle(obstacleManager.smallBird);
+                audioSource.PlayOneShot(windowThud);
+            }
+            yield return new WaitForSeconds(spawnChanceInterval);
         }
-        yield return new WaitForSeconds(spawnChanceInterval);
     }
 
-    
+    IEnumerator LargeBird()
+    {
+        while (true)
+        {
+            float spawnChance = 0.35f;
+            float spawnChanceInterval = 5f;
+            if (Random.value < spawnChance)
+            {
+                obstacleManager.randomSpawn_GenericObstacle(obstacleManager.bigBird);
+                audioSource.PlayOneShot(windowThud);
+            }
+            yield return new WaitForSeconds(spawnChanceInterval);
+        }
+    }
+
+    IEnumerator Mud()
+    {
+        while (true)
+        {
+            float spawnChance = 0.35f;
+            float spawnChanceInterval = 5f;
+            if (Random.value < spawnChance)
+            {
+                obstacleManager.randomSpawn_GenericObstacle(obstacleManager.mud);
+                audioSource.PlayOneShot(mudSplat);
+            }
+            yield return new WaitForSeconds(spawnChanceInterval);
+        }
+    }
+
+
 
 }

@@ -48,12 +48,15 @@ public class RaycastClickAndDrag : MonoBehaviour
     void holdingObject()
     {
         if (holding)
-        {
-            Transform t = colliderHit.transform;
-            Rigidbody2D rb = colliderHit.attachedRigidbody;
-            Vector3 mousePosition = GetMouseWorldPosition();
-            mousePosition.z = 0;
-            rb.transform.position = mousePosition;
+        { if (colliderHit != null)
+            {
+                Transform t = colliderHit.transform;
+                Rigidbody2D rb = colliderHit.attachedRigidbody;
+                Vector3 mousePosition = GetMouseWorldPosition();
+                mousePosition.z = 0;
+                rb.transform.position = mousePosition;
+            }
+
         }
     }
     Vector3 GetMouseWorldPosition()

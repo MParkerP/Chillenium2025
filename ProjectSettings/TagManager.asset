@@ -42,6 +42,9 @@ TagManager:
   - name: Sky
     uniqueID: 196747619
     locked: 0
+  - name: Windshield
+    uniqueID: 1258767089
+    locked: 0
   - name: BehindCockpit
     uniqueID: 865703517
     locked: 0
