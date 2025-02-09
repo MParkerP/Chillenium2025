@@ -5,7 +5,7 @@ public class Eraseable : MonoBehaviour
 
     private float currentOpacity;
     private SpriteRenderer sprite;
-    public Color color;
+    private Color color;
 
     void Start()
     {
