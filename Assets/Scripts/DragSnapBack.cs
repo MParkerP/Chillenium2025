@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class DragSnapBack : MonoBehaviour
 {
+    [SerializeField] private bool showOnSnap = false;
     private bool isDragging;
     private Vector3 offset;
     public Transform snapPoint;
@@ -22,9 +23,13 @@ public class DragSnapBack : MonoBehaviour
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
         isDragging = true;
         offset = transform.position - GetMouseWorldPosition();
-        color = Color.white;
-        color.a = 1;
-        sprite.color = color;
+        if (!showOnSnap)
+        {
+            color = Color.white;
+            color.a = 1;
+            sprite.color = color;
+        }
+
 
     }
 
@@ -33,10 +38,14 @@ public class DragSnapBack : MonoBehaviour
         if (snapPoint == null) return;
         isDragging = false;
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-        GetComponent<Rigidbody2D>().linearVelocity = new Vector3(0,0,0);
+        GetComponent<Rigidbody2D>().linearVelocity = new Vector3(0, 0, 0);
         transform.position = snapPoint.position;
-        color.a = 0;
-        sprite.color = color;
+        if (!showOnSnap)
+        {
+            color.a = 0;
+            sprite.color = color;
+        }
+
     }
 
     void Update()

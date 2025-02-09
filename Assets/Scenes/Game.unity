@@ -986,6 +986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bf33c7d45f39404baec74880231ef31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showOnSnap: 0
   snapPoint: {fileID: 1097614690}
   animator: {fileID: 2134717023}
 --- !u!50 &1546195963
@@ -1290,6 +1291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bf33c7d45f39404baec74880231ef31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showOnSnap: 1
   snapPoint: {fileID: 1702061163}
   animator: {fileID: 0}
 --- !u!1 &1918376775
@@ -1588,6 +1590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bf33c7d45f39404baec74880231ef31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showOnSnap: 0
   snapPoint: {fileID: 1097614690}
   animator: {fileID: 0}
 --- !u!95 &2134717023
