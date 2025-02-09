@@ -23,12 +23,19 @@ public class AmbienceController : MonoBehaviour
     {
         progressManager = GameObject.Find("ProgressManager").GetComponent<ProgressManager>();
         audioSource = GetComponent<AudioSource>();
-        audioSource.PlayOneShot(takeoff);
+        //StartCoroutine(Takeoff());
+    }
+
+    public void StartTakeOff()
+    {
         StartCoroutine(Takeoff());
     }
 
-    IEnumerator Takeoff()
+
+    
+    public IEnumerator Takeoff()
     {
+        audioSource.PlayOneShot(takeoff);
         yield return new WaitForSeconds(3);
         isTakingOff=true;
         yield return new WaitForSeconds(10);

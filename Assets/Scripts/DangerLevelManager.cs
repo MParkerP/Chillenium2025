@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using Unity.VisualScripting;
 
 public class DangerLevelManager : MonoBehaviour
 {
@@ -14,15 +15,34 @@ public class DangerLevelManager : MonoBehaviour
     [SerializeField] private float passiveDangerScaler;
     [SerializeField] private float passiveDangerDecayIncr;
 
+    [SerializeField] private GameObject lossCanvas;
+    public HappinessScript happinessScript;
+
+    
     private void Start()
     {
         slider.value = startingDanger;
         slider.maxValue = maxDanger;
     }
 
+    private void Update()
+    {
+        if (slider.value >= slider.maxValue) 
+        {
+            LoseGame();
+        }
+    }
+
+    public void LoseGame()
+    {
+        lossCanvas.SetActive(true);
+        Time.timeScale = 0;
+    }
+    
+
     private void FixedUpdate()
     {
-        slider.value += totalPassiveDangerFactor * passiveDangerScaler;
+        slider.value += totalPassiveDangerFactor * passiveDangerScaler * happinessScript.modifier;
 
         if (totalPassiveDangerFactor <= 0)
         {

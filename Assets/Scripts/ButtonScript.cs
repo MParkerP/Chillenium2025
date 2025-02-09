@@ -11,6 +11,7 @@ public class ButtonScript : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip buttonClick;
     public AudioClip fastenSeatbeltSound;
+    public HappinessScript happinessScript;
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -35,6 +36,7 @@ public class ButtonScript : MonoBehaviour
             bool colliderHit = Physics2D.OverlapPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition));
             if (colliderHit)
             {
+                happinessScript.StartButtonStuff();
                 audioSource.PlayOneShot(buttonClick);
                 audioSource.PlayOneShot(fastenSeatbeltSound);
                 animator.SetBool("pressed",true);

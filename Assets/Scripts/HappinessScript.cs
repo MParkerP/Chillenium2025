@@ -10,7 +10,7 @@ public class HappinessScript : MonoBehaviour
     [SerializeField] private float decrementAmount;
     [SerializeField] private float incrementAmount;
     [SerializeField] private float happinessLevel = 100;
-    [SerializeField] private float modifier = 1;
+    [SerializeField] public float modifier = 1;
     [SerializeField] private Slider slider;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -82,7 +82,7 @@ public class HappinessScript : MonoBehaviour
 
     public void StartButtonStuff()
     {
-        decrementAmount = 10;
-        incrementAmount = 10;
+        decrementAmount = 0.1f;
+        incrementAmount = 0.1f;
     }
 }

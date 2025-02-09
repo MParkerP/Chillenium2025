@@ -21,7 +21,7 @@ public class EventScript : MonoBehaviour
         }
     }
 
-    IEnumerator SpawnSmallBirdFlock(int numBirds)
+    public IEnumerator SpawnSmallBirdFlock(int numBirds)
     {
         float waitTime;
         for (int i  = 0; i < numBirds; i++)
@@ -35,7 +35,7 @@ public class EventScript : MonoBehaviour
 
     }
 
-    IEnumerator SpawnGroup(int numThings,ObstacleManager.GenericObstacle thing)
+    public IEnumerator SpawnGroup(int numThings,ObstacleManager.GenericObstacle thing)
     {
         float waitTime;
         for (int i = 0; i < numThings; i++)

@@ -18,6 +18,9 @@ public class SimonSays : MonoBehaviour
     [SerializeField] private ShapeButton d;
     [SerializeField] private ShapeButton t;
     [SerializeField] private ShapeButton c;
+
+    public DangerLevelManager dangerLevelManager;
+    public float dangerfactor;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -78,7 +81,7 @@ public class SimonSays : MonoBehaviour
     private void win()
     {
         //keep buttons depressed
-        Debug.Log("You won shape game");
+        dangerLevelManager.DecreasePassiveDangerFactor(dangerfactor);
         StopAllCoroutines();
     }
 
@@ -86,6 +89,7 @@ public class SimonSays : MonoBehaviour
     {
         //lift up the buttons
         Debug.Log("You lost");
+        dangerLevelManager.IncreaseDangerLevelOnce(100);
         InputSequence = "";
         raiseAll();
     }
@@ -114,6 +118,7 @@ public class SimonSays : MonoBehaviour
             }
             yield return new WaitForSeconds(0.25f);
         }
+        dangerLevelManager.IncreasePassiveDangerFactor(dangerfactor);
     }
 
     IEnumerator triggerFlash()

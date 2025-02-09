@@ -8,6 +8,8 @@ public class ObstacleManager : MonoBehaviour
 {
     [SerializeField] private List<GameObject> obstacles;
 
+    private AudioSource audioSource;
+
     //BirdLimits
     [SerializeField] private float leftMostX; 
     [SerializeField] private float rightMostX;
@@ -55,6 +57,8 @@ public class ObstacleManager : MonoBehaviour
     private void Start()
     {
         dangerLevelManager = GameObject.Find("DangerLevelManager").GetComponent<DangerLevelManager>();
+        audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
     }
 
     private void Update()

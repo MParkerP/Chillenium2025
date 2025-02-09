@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ProgressManager : MonoBehaviour
 {
@@ -11,17 +12,23 @@ public class ProgressManager : MonoBehaviour
     [SerializeField] private float progressBarIncrement;
     [SerializeField] private float eventInterval;
 
-    public GameObject smallBirdPrefab;
-    public GameObject largeBirdPrefab;
-    public GameObject mudPrefab;
-
     public AudioClip windowThud;
     public AudioClip mudSplat;
     private AudioSource audioSource;
     public HappinessScript happinessScript;
+    public EventScript eventScript;
 
     public SimonSays simonSays;
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+    
+    public void Restart()
+    {
+        SceneManager.LoadScene("Main");
+    }
 
     public float timer = 0f;
 
@@ -33,17 +40,26 @@ public class ProgressManager : MonoBehaviour
 
     const int SEAT_BELT_TIME = 150; bool seatBeltOn = false;
     const int SIMON_SAYS_TIME = 165; bool simonOn = false;
-    const int PASSWORD_TIME = 285; bool password = false;
+
+    const int END_GAME_TIME = 285; bool gameWon = false;
+
+/*    const int PASSWORD_TIME = 285; bool password = false;
     const int TURBULENCE_TIME = 405; bool turbulenceOn = false;
     const int FINAL_TIME = 465; bool finalOn = false;
-    const int END_TIME = 645; bool endOn = false;
+    const int END_TIME = 645; bool endOn = false;*/
 
     public bool gameStart = false;
 
     List<Action> possibleEvents = new List<Action>();
 
+    public GameObject WinCanvas;
+
     private void Start()
     {
+        possibleEvents.Add(SpawnLargeBirdFlockEvent);
+        possibleEvents.Add(SpawnSmallBirdFlockEvent);
+        possibleEvents.Add(SpawnMudGroupEvent);
+
         audioSource = GetComponent<AudioSource>();
         obstacleManager = GameObject.Find("ObstacleManager").GetComponent<ObstacleManager>();
     }
@@ -87,9 +103,21 @@ public class ProgressManager : MonoBehaviour
             if (timer >= SIMON_SAYS_TIME && !simonOn)
             {
                 simonOn = true;
-                happinessScript.StartButtonStuff();
+                simonSays.enableGame();
+            }
+
+            if (timer >= END_GAME_TIME && !gameWon)
+            {
+                gameWon = true;
+                simonSays.enableGame();
             }
         }
+    }
+
+    public void WinGame()
+    {
+        Time.timeScale = 0;
+        WinCanvas.SetActive(true);
     }
 
 
@@ -151,6 +179,21 @@ public class ProgressManager : MonoBehaviour
             possibleEvents[func]?.Invoke();
             yield return new WaitForSeconds(eventInterval);
         }
+    }
+
+    void SpawnSmallBirdFlockEvent()
+    {
+        StartCoroutine(eventScript.SpawnSmallBirdFlock(4));
+    }
+
+    void SpawnLargeBirdFlockEvent()
+    {
+        StartCoroutine(eventScript.SpawnGroup(2, obstacleManager.bigBird));
+    }
+
+    void SpawnMudGroupEvent()
+    {
+        StartCoroutine(eventScript.SpawnGroup(3, obstacleManager.mud));
     }
 
 
