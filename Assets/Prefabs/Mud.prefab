@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5739873478911361243}
   - component: {fileID: -453032697125754536}
   - component: {fileID: -3673536662102512831}
+  - component: {fileID: -5890938556511087269}
   m_Layer: 0
   m_Name: Mud
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.24029386, y: -0.40358296, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,8 +77,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1258767089
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 3229075066994683447, guid: 867ab6b259540014596e9802f5cb9506, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -171,3 +172,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.93, y: 0.72}
   m_EdgeRadius: 0
+--- !u!114 &-5890938556511087269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2572990117801504701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0780d72b28c4934d8675b7cd2318ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  passiveDangerFactor: 0

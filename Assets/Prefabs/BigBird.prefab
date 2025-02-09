@@ -115,8 +115,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1928814713
-  m_SortingLayer: 0
+  m_SortingLayerID: 1258767089
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 3046851766868502047, guid: 0d5a7105977e0bd42a25106494ad788c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -170,6 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   feather: {fileID: 3267717625282134167, guid: 8035022a287a553478abf0f2b98446b9, type: 3}
   numFeathers: 5
+  featherpassivedanger: 0
 --- !u!60 &7390680113182162777
 PolygonCollider2D:
   m_ObjectHideFlags: 0
