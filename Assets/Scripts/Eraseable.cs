@@ -18,6 +18,11 @@ public class Eraseable : MonoBehaviour
         currentOpacity -= 0.2f;
         color.a = currentOpacity;
         sprite.color = color;
-
+        if (currentOpacity <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
+
+
 }
