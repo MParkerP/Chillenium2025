@@ -16,9 +16,12 @@ public class AmbienceController : MonoBehaviour
 
     [SerializeField] private GameObject[] shakyObjects;
 
+    private ProgressManager progressManager;
+
 
     private void Start()
     {
+        progressManager = GameObject.Find("ProgressManager").GetComponent<ProgressManager>();
         audioSource = GetComponent<AudioSource>();
         audioSource.PlayOneShot(takeoff);
         StartCoroutine(Takeoff());
@@ -30,6 +33,7 @@ public class AmbienceController : MonoBehaviour
         isTakingOff=true;
         yield return new WaitForSeconds(10);
         brownNoise.Play();
+        progressManager.gameStart = true;
     }
 
     private void FixedUpdate()

@@ -26,7 +26,7 @@ public class ObstacleManager : MonoBehaviour
     [SerializeField] private static float smallBirdDangerIncrement;
     [SerializeField] private static float smallBirdPassiveDangerFactor;
 
-    [SerializeField] private GenericObstacle smallBird = new GenericObstacle(smallBirdObject, smallBirdPassiveDangerFactor, bigBirdInstantDangerIncrement);
+    [SerializeField] public GenericObstacle smallBird = new GenericObstacle(smallBirdObject, smallBirdPassiveDangerFactor, bigBirdInstantDangerIncrement);
 
     [SerializeField] private static GameObject bigBirdObject;
     [SerializeField] private static float bigBirdpassiveDangerFactor;

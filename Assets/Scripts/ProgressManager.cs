@@ -1,9 +1,16 @@
+using System.Collections;
 using UnityEngine;
 
 public class ProgressManager : MonoBehaviour
 {
+    private ObstacleManager obstacleManager;
     [SerializeField] private GameObject progressBar;
     [SerializeField] private float progressBarIncrement;
+
+    public GameObject smallBirdPrefab;
+    public GameObject largeBirdPrefab;
+    public GameObject mudPrefab;
+
 
     private float timer = 0f;
 
@@ -19,10 +26,24 @@ public class ProgressManager : MonoBehaviour
     const int FINAL_TIME = 465; bool finalOn = false;
     const int END_TIME = 645; bool endOn = false;
 
+    public bool gameStart = false;
+
+    private void Start()
+    {
+        obstacleManager = GameObject.Find("ObstacleManager").GetComponent<ObstacleManager>();
+    }
+
     private void Update()
     {
-        timer += Time.deltaTime;
+        if (gameStart)
+        {
+            timer += Time.deltaTime;
 
+            if (timer >= SMALL_BIRD_TIME && !smallBirdOn)
+            {
+                StartCoroutine(SmallBird());
+            }
+        }
     }
 
 
@@ -30,5 +51,18 @@ public class ProgressManager : MonoBehaviour
     {
         progressBar.transform.position = progressBar.transform.position + new Vector3(-progressBarIncrement, 0, 0);
     }
+
+    IEnumerator SmallBird()
+    {
+        float spawnChance = 0.33f;
+        float spawnChanceInterval = 3f;
+        if (Random.value < spawnChance)
+        {
+            obstacleManager.randomSpawn_GenericObstacle(obstacleManager.smallBird);
+        }
+        yield return new WaitForSeconds(spawnChanceInterval);
+    }
+
+    
 
 }
