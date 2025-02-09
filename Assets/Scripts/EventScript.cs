@@ -7,6 +7,7 @@ public class EventScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
      ObstacleManager obstacleManager;
     [SerializeField] GameObject managerObject;
+    bool rain = false;
     void Start()
     {
         obstacleManager = managerObject.GetComponent<ObstacleManager>();
@@ -17,7 +18,11 @@ public class EventScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            StartCoroutine(SpawnSmallBirdFlock(10));
+            StartRain();
+        }
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            StopRain();
         }
     }
 
@@ -45,7 +50,30 @@ public class EventScript : MonoBehaviour
             
             obstacleManager.randomSpawn_GenericObstacle(thing);
         }
-        
+    }
 
+    public void StartRain()
+    {
+        rain = true;
+    }
+    private void FixedUpdate()
+    {
+        if(rain)
+        {
+            StartCoroutine(rainFall());
+            Debug.Log("raining");
+        }
+    }
+
+    public void StopRain()
+    {
+        rain = false;
+    }
+    IEnumerator rainFall()
+    {
+        float waitTime;
+        waitTime = UnityEngine.Random.Range(1f, 1.5f);
+        yield return new WaitForSeconds(waitTime);
+        obstacleManager.randomSpawn_GenericObstacle(obstacleManager.droplet);
     }
 }
