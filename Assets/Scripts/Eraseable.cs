@@ -11,6 +11,7 @@ public class Eraseable : MonoBehaviour
     {
         currentOpacity = 1f;
         sprite = GetComponent<SpriteRenderer>();
+        color = Color.white;
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
