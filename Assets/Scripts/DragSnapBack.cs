@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SnappingDraggable : MonoBehaviour
+public class DragSnapBack : MonoBehaviour
 {
     private bool isDragging;
     private Vector3 offset;
