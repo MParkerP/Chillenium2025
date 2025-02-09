@@ -13,6 +13,7 @@ public class SimonSays : MonoBehaviour
     public int simonLength;
     private string sequence;
     private string InputSequence;
+    private bool enabled;
     [SerializeField] private ShapeButton s;
     [SerializeField] private ShapeButton d;
     [SerializeField] private ShapeButton t;
@@ -23,7 +24,16 @@ public class SimonSays : MonoBehaviour
         InputSequence = "";
         sequence = generateSequence();
         raiseAll();
-        StartCoroutine(flashSequence());
+        enabled = false;
+        StartCoroutine(triggerFlash());
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            enabled = true;
+        }
     }
 
 
@@ -113,6 +123,29 @@ public class SimonSays : MonoBehaviour
             }
             yield return new WaitForSeconds(0.25f);
         }
+    }
+
+    IEnumerator triggerFlash()
+    {
+        while (true)
+        {
+            if (enabled)
+            {
+                StartCoroutine(flashSequence());
+            }
+            else
+            {
+                Debug.Log("I ran but didnt flash");
+            }
+            yield return new WaitForSeconds(10f);
+        }
+    }
+
+    public void enableGame()
+    {
+        enabled = true;
+        generateSequence();
+        raiseAll();
     }
 
 
