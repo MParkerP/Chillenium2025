@@ -16,21 +16,25 @@ public class RaycastClickAndDrag : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButtonDown("Fire1"))
         {
             colliderHit = Physics2D.OverlapPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition));
             if (colliderHit != null && colliderHit.gameObject.layer == 6)
             {
                 holding = true;
-                //rb.linearVelocity = new Vector2(mousePosition.x - t.position.x, mousePosition.y - t.position.y) * 45;
+                //rb.linearVelocity = new Vector2(mouse.x - t.position.x, mouse.y - t.position.y) * 45;
             }
         }
 
         if (Input.GetButtonUp("Fire1"))
         {
             holding = false;
+            Transform t = colliderHit.transform;
+            Vector3 mouse = GetMouseWorldPosition();
+            colliderHit.attachedRigidbody.linearVelocity = new Vector2(mouse.x - t.position.x, mouse.y - t.position.y) * 25;
+            // colliderHit.attachedRigidbody.gravityScale = 1;
         }
 
         holdingObject();
@@ -39,8 +43,6 @@ public class RaycastClickAndDrag : MonoBehaviour
 
     void holdingObject()
     {
-
-
         if (holding)
         {
             Transform t = colliderHit.transform;
