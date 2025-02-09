@@ -8,6 +8,11 @@ public class ObstacleManager : MonoBehaviour
 {
     [SerializeField] private List<GameObject> obstacles;
 
+    [SerializeField] private float leftMostX;
+    [SerializeField] private float rightMostX;
+    [SerializeField] private float lowerMostY;
+    [SerializeField] private float upperMostY;
+
     [SerializeField] public enum dangerFactors {smallBird = 10, bigBird = 20 };
 
     [SerializeField] private static GameObject smallBirdObject;
@@ -40,7 +45,7 @@ public class ObstacleManager : MonoBehaviour
         }
 
         if(Input.GetKeyUp(KeyCode.B)) { Spawn_GenericObstacle(smallBird, smallBirdSpawnLocation); }
-        if(Input.GetKeyUp(KeyCode.H)) { Spawn_GenericObstacle(bigBird,bigBirdSpawnPostion); }
+        if(Input.GetKeyUp(KeyCode.H)) { randomSpawn_GenericObstacle(bigBird); }
     }
 
     /*public GameObject Spawn_SmallBird()
@@ -76,5 +81,19 @@ public class ObstacleManager : MonoBehaviour
         return thisObject;
     }
 
+    public GameObject randomSpawn_GenericObstacle(GenericObstacle obstacle)
+    {
+        float randomx = UnityEngine.Random.Range(leftMostX, rightMostX);
+        float randomy = UnityEngine.Random.Range(lowerMostY, upperMostY);
+        Vector2 position = new Vector2(randomx, randomy);
+        GameObject thisObject = Instantiate(obstacle.obstacle, position, Quaternion.identity);
+        obstacles.Add(thisObject);
+        dangerLevelManager.RecieveNewObstacle(obstacle.instantDangerIncrement, obstacle.passiveDangerFactor);
+        return thisObject;
+    }
+
+     
 
 }
+
+

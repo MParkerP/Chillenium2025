@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -8799578161157856996}
   - component: {fileID: -8146288984301131640}
   - component: {fileID: 7596938062948406554}
+  - component: {fileID: 8748079551259815679}
   m_Layer: 6
   m_Name: SmallBird
   m_TagString: Untagged
@@ -91,7 +92,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1928814713
-  m_SortingLayer: -1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -5186128018886537431, guid: ac9ac4b7beb15f046acbc425646f4575, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -199,3 +200,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &8748079551259815679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7664933524408519649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e4173d3421f5a48a0496ca986288f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

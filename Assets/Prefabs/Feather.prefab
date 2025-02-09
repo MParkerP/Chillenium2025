@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2823427095945739333}
   - component: {fileID: -2761634249673218064}
   - component: {fileID: 5939191381177652821}
+  - component: {fileID: 4890895642233016439}
   m_Layer: 6
   m_Name: Feather
   m_TagString: Untagged
@@ -188,3 +189,15 @@ PolygonCollider2D:
       - {x: 0.43016577, y: -0.87917966}
       - {x: 0.06451109, y: -0.0302446}
   m_UseDelaunayMesh: 0
+--- !u!114 &4890895642233016439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3267717625282134167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e4173d3421f5a48a0496ca986288f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -33,6 +33,7 @@ public class RaycastClickAndDrag : MonoBehaviour
             holding = false;
             Transform t = colliderHit.transform;
             Vector3 mouse = GetMouseWorldPosition();
+            colliderHit.attachedRigidbody.linearDamping = 0;
             colliderHit.attachedRigidbody.linearVelocity = new Vector2(mouse.x - t.position.x, mouse.y - t.position.y) * 25;
             // colliderHit.attachedRigidbody.gravityScale = 1;
         }
