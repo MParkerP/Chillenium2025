@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections;
 public class SimonSays : MonoBehaviour
 {
     /*
@@ -23,27 +23,24 @@ public class SimonSays : MonoBehaviour
         InputSequence = "";
         sequence = generateSequence();
         raiseAll();
+        StartCoroutine(flashSequence());
     }
 
 
     string generateSequence()
     {
-        //Later replace with predefined sequences
-        string sequenceString = "";
-        for (int i = 0; i < simonLength; i++)
+        string sequenceString = "tsdc";
+        char[] sequenceArray = sequenceString.ToCharArray();
+
+        for (int i = 0; i < 15; i++)
         {
             int choice = Random.Range(0, 4);
-            switch (choice)
-            {
-                case 0: sequenceString += "s"; break;
-                case 1: sequenceString += "t"; break;
-                case 2: sequenceString += "c"; break;
-                case 3: sequenceString += "d"; break;
-                default: break;
-            }
+            char tmp = sequenceArray[i % 4];
+            sequenceArray[i % 4] = sequenceArray[choice];
+            sequenceArray[choice] = tmp;
         }
-        //Debug.Log("Looking for: " + sequenceString);
-        return "cstd";
+
+        return new string(sequenceArray);
     }
 
     public void recieveInput(string color)
@@ -100,4 +97,24 @@ public class SimonSays : MonoBehaviour
         c.raise();
         d.raise();
     }
+
+
+    IEnumerator flashSequence()
+    {
+        for (int i = 0; i < simonLength; i++)
+        {
+            switch (sequence[i])
+            {
+                case 's': s.toggleLight(); yield return new WaitForSeconds(1f); s.toggleLight(); break;
+                case 't': t.toggleLight(); yield return new WaitForSeconds(1f); t.toggleLight(); break;
+                case 'd': d.toggleLight(); yield return new WaitForSeconds(1f); d.toggleLight(); break;
+                case 'c': c.toggleLight(); yield return new WaitForSeconds(1f); c.toggleLight(); break;
+                default: break;
+            }
+            yield return new WaitForSeconds(0.25f);
+        }
+    }
+
+
+
 }
