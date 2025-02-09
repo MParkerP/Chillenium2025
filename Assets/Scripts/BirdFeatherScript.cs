@@ -8,8 +8,13 @@ public class BirdFeatherScript : MonoBehaviour
     Animator animator;
     [SerializeField] GameObject feather;
     [SerializeField] private int numFeathers;
+    private DangerLevelManager dangerLevelManager;
+    private ObstacleManager obstacleManager;
+    public float featherpassivedanger;
     void Start()
     {
+        dangerLevelManager = GameObject.Find("DangerLevelManager").GetComponent<DangerLevelManager>();
+        obstacleManager = GameObject.Find("ObstacleManager").GetComponent<ObstacleManager>();
         StartCoroutine(SpawnFeathers());
     }
 
@@ -26,6 +31,7 @@ public class BirdFeatherScript : MonoBehaviour
         for (int i = 0; i < numFeathers; i++)
         {
             Instantiate(feather, transform.position, transform.rotation);
+            dangerLevelManager.IncreasePassiveDangerFactor(2);
         }
     }
 }
