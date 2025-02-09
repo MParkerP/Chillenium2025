@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: d7c044ce07fb6b948856229cbb6d2169
+guid: e2b5d46790339b34c9c4a7cbea642d33
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1237261780862220803
-    second: BucketSponge_0
+      213: -7574389933154388198
+    second: Squigee_0
   - first:
-      213: 6360735400276214268
-    second: BucketSponge_1
+      213: -4552695041033155058
+    second: Squigee_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -78,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -88,6 +88,19 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -116,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BucketSponge_0
+      name: Squigee_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 195
-        width: 174
-        height: 186
+        x: 3
+        y: 119
+        width: 138
+        height: 118
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +144,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df54a8137fc54dee0800000000000000
-      internalID: -1237261780862220803
+      spriteID: a17b9049c7c52e690800000000000000
+      internalID: -7574389933154388198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BucketSponge_1
+      name: Squigee_1
       rect:
         serializedVersion: 2
-        x: 7
-        y: 7
-        width: 174
-        height: 170
+        x: 3
+        y: 3
+        width: 138
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cf147bb552fd54850800000000000000
-      internalID: 6360735400276214268
+      spriteID: e0e498c3bf391d0c0800000000000000
+      internalID: -4552695041033155058
       vertices: []
       indices: 
       edges: []
@@ -173,8 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BucketSponge_0: -1237261780862220803
-      BucketSponge_1: 6360735400276214268
+      Squigee_0: -7574389933154388198
+      Squigee_1: -4552695041033155058
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

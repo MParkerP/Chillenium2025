@@ -19,6 +19,7 @@ public class DragSnapBack : MonoBehaviour
     void OnMouseDown()
     {
         if (snapPoint == null) return;
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
         isDragging = true;
         offset = transform.position - GetMouseWorldPosition();
         color = Color.white;
@@ -31,6 +32,8 @@ public class DragSnapBack : MonoBehaviour
     {
         if (snapPoint == null) return;
         isDragging = false;
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        GetComponent<Rigidbody2D>().linearVelocity = new Vector3(0,0,0);
         transform.position = snapPoint.position;
         color.a = 0;
         sprite.color = color;

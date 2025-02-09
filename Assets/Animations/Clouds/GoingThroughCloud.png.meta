@@ -1,0 +1,752 @@
+fileFormatVersion: 2
+guid: b144082baa5aaf2428e16a72a7a5118c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5460454637799928382
+    second: GoingThroughCloud_0
+  - first:
+      213: 4489154793546188129
+    second: GoingThroughCloud_1
+  - first:
+      213: 909000521390551512
+    second: GoingThroughCloud_2
+  - first:
+      213: -8610884864569670407
+    second: GoingThroughCloud_3
+  - first:
+      213: -1184211187215821481
+    second: GoingThroughCloud_4
+  - first:
+      213: 2119974008345762472
+    second: GoingThroughCloud_5
+  - first:
+      213: -2274578735374795876
+    second: GoingThroughCloud_6
+  - first:
+      213: -2562677948482489751
+    second: GoingThroughCloud_7
+  - first:
+      213: 4784124604205491208
+    second: GoingThroughCloud_8
+  - first:
+      213: -2684418828947036047
+    second: GoingThroughCloud_9
+  - first:
+      213: -2776123105972176037
+    second: GoingThroughCloud_10
+  - first:
+      213: -3270857014740575394
+    second: GoingThroughCloud_11
+  - first:
+      213: -984617999778763647
+    second: GoingThroughCloud_12
+  - first:
+      213: -7367834286254613558
+    second: GoingThroughCloud_13
+  - first:
+      213: 8635169789369377360
+    second: GoingThroughCloud_14
+  - first:
+      213: 7111696205562740373
+    second: GoingThroughCloud_15
+  - first:
+      213: -1037066888122938511
+    second: GoingThroughCloud_16
+  - first:
+      213: 4808235631367225354
+    second: GoingThroughCloud_17
+  - first:
+      213: 4355270227506996364
+    second: GoingThroughCloud_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GoingThroughCloud_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6487
+        width: 1917
+        height: 1074
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cd0dc900719834b0800000000000000
+      internalID: -5460454637799928382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoingThroughCloud_1
+      rect:
+        serializedVersion: 2
+        x: 1917
+        y: 6487
+        width: 1917
+        height: 1074
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 165001b008eac4e30800000000000000
+      internalID: 4489154793546188129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoingThroughCloud_2
+      rect:
+        serializedVersion: 2
+        x: 3834
+        y: 6487
+        width: 1917
+        height: 1074
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d1f02a782b6d9c00800000000000000
+      internalID: 909000521390551512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoingThroughCloud_3
+      rect:
+        serializedVersion: 2
+        x: 5751
+        y: 6487
+        width: 1917
+        height: 1074
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f4898d86ddff7880800000000000000
+      internalID: -8610884864569670407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoingThroughCloud_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5413
+        width: 1917
+        height: 1074
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75515fe0336d09fe0800000000000000
+      internalID: -1184211187215821481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoingThroughCloud_5
+      rect:
+        serializedVersion: 2
+        x: 1917
+        y: 5413
+        width: 1917
+        height: 1074
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aa9284e029ab6d10800000000000000
+      internalID: 2119974008345762472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoingThroughCloud_6
+      rect:
+        serializedVersion: 2
+        x: 3834
+        y: 5413
+        width: 1917
+        height: 1074
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9bf35001b21f60e0800000000000000
+      internalID: -2274578735374795876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoingThroughCloud_7
+      rect:
+        serializedVersion: 2
+        x: 5751
+        y: 5413
+        width: 1917
+        height: 1074
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96279f6cbf98f6cd0800000000000000
+      internalID: -2562677948482489751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoingThroughCloud_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4339
+        width: 1917
+        height: 1074
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 804efdaeaff946240800000000000000
+      internalID: 4784124604205491208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoingThroughCloud_9
+      rect:
+        serializedVersion: 2
+        x: 1917
+        y: 4339
+        width: 1917
+        height: 1074
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 178ed383c470fbad0800000000000000
+      internalID: -2684418828947036047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoingThroughCloud_10
+      rect:
+        serializedVersion: 2
+        x: 3834
+        y: 4339
+        width: 1917
+        height: 1074
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5b36cf5eba3979d0800000000000000
+      internalID: -2776123105972176037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoingThroughCloud_11
+      rect:
+        serializedVersion: 2
+        x: 5751
+        y: 4339
+        width: 1917
+        height: 1074
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5b1b45ffd49b92d0800000000000000
+      internalID: -3270857014740575394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoingThroughCloud_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3265
+        width: 1917
+        height: 1074
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af35fb2b53d45945b0e408c4d58a390
+      internalID: -984617999778763647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoingThroughCloud_13
+      rect:
+        serializedVersion: 2
+        x: 1917
+        y: 3265
+        width: 1917
+        height: 1074
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa8830c1801b944418c9f41a8c89e76c
+      internalID: -7367834286254613558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoingThroughCloud_14
+      rect:
+        serializedVersion: 2
+        x: 3834
+        y: 3265
+        width: 1917
+        height: 1074
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 120bd68bb2ee31f45bfd0aeaae7fa750
+      internalID: 8635169789369377360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoingThroughCloud_15
+      rect:
+        serializedVersion: 2
+        x: 5751
+        y: 3265
+        width: 1917
+        height: 1074
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bb9bd24aa7669a4aada31fe28cc86fa
+      internalID: 7111696205562740373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoingThroughCloud_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2191
+        width: 1917
+        height: 1074
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c59763ee4f5e674a949f62f82b4217c
+      internalID: -1037066888122938511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoingThroughCloud_17
+      rect:
+        serializedVersion: 2
+        x: 1917
+        y: 2191
+        width: 1917
+        height: 1074
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ad79aa4b390ce4b993fc994f37d921
+      internalID: 4808235631367225354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoingThroughCloud_18
+      rect:
+        serializedVersion: 2
+        x: 3834
+        y: 2191
+        width: 1917
+        height: 1074
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5782f66281c897c49b96488940e3e269
+      internalID: 4355270227506996364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoingThroughCloud_19
+      rect:
+        serializedVersion: 2
+        x: 5751
+        y: 2191
+        width: 1917
+        height: 1074
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e87af0d9476511f408b3a12f1e0d93dc
+      internalID: 1958488819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoingThroughCloud_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1117
+        width: 1917
+        height: 1074
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f2b1244f94f374d84db96a3c082cde
+      internalID: -1487234487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoingThroughCloud_21
+      rect:
+        serializedVersion: 2
+        x: 1917
+        y: 1117
+        width: 1917
+        height: 1074
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c053c34e722bb48b1cf6e541364310
+      internalID: 2145454754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoingThroughCloud_22
+      rect:
+        serializedVersion: 2
+        x: 3834
+        y: 1117
+        width: 1917
+        height: 1074
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1edf546e12a42714ca2e890e6149e6db
+      internalID: 1282033958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoingThroughCloud_23
+      rect:
+        serializedVersion: 2
+        x: 5751
+        y: 1117
+        width: 1917
+        height: 1074
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c718391ccca9ff40ace2cec73c21f66
+      internalID: -714385420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 02b9d3a0d317e524cbd829e076c50db3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      GoingThroughCloud_0: -5460454637799928382
+      GoingThroughCloud_1: 4489154793546188129
+      GoingThroughCloud_10: -2776123105972176037
+      GoingThroughCloud_11: -3270857014740575394
+      GoingThroughCloud_12: -984617999778763647
+      GoingThroughCloud_13: -7367834286254613558
+      GoingThroughCloud_14: 8635169789369377360
+      GoingThroughCloud_15: 7111696205562740373
+      GoingThroughCloud_16: -1037066888122938511
+      GoingThroughCloud_17: 4808235631367225354
+      GoingThroughCloud_18: 4355270227506996364
+      GoingThroughCloud_19: 1958488819
+      GoingThroughCloud_2: 909000521390551512
+      GoingThroughCloud_20: -1487234487
+      GoingThroughCloud_21: 2145454754
+      GoingThroughCloud_22: 1282033958
+      GoingThroughCloud_23: -714385420
+      GoingThroughCloud_3: -8610884864569670407
+      GoingThroughCloud_4: -1184211187215821481
+      GoingThroughCloud_5: 2119974008345762472
+      GoingThroughCloud_6: -2274578735374795876
+      GoingThroughCloud_7: -2562677948482489751
+      GoingThroughCloud_8: 4784124604205491208
+      GoingThroughCloud_9: -2684418828947036047
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
