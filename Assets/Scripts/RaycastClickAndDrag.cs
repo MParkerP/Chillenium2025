@@ -8,6 +8,7 @@ public class RaycastClickAndDrag : MonoBehaviour
     private Camera mainCamera;
     private bool holding;
     private Collider2D colliderHit;
+    public LayerMask birdLayer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,8 +21,8 @@ public class RaycastClickAndDrag : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            colliderHit = Physics2D.OverlapPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-            if (colliderHit != null && colliderHit.gameObject.layer == 6)
+            colliderHit = Physics2D.OverlapPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition), birdLayer);
+            if (colliderHit != null)
             {
                 holding = true;
                 //rb.linearVelocity = new Vector2(mouse.x - t.position.x, mouse.y - t.position.y) * 45;

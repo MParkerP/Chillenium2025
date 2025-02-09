@@ -8,8 +8,12 @@ public class ButtonScript : MonoBehaviour
     HappinessScript sign;
     [SerializeField] GameObject HappinessManager;
     [SerializeField] GameObject seatBeltSign;
+    private AudioSource audioSource;
+    public AudioClip buttonClick;
+    public AudioClip fastenSeatbeltSound;
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         signAnimator = seatBeltSign.GetComponent<Animator>();
         sign = HappinessManager.GetComponent<HappinessScript>();
@@ -29,8 +33,10 @@ public class ButtonScript : MonoBehaviour
     {
         
             bool colliderHit = Physics2D.OverlapPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-            if (colliderHit != null)
+            if (colliderHit)
             {
+                audioSource.PlayOneShot(buttonClick);
+                audioSource.PlayOneShot(fastenSeatbeltSound);
                 animator.SetBool("pressed",true);
                 signAnimator.SetTrigger("toggle");
                 sign.toggle();

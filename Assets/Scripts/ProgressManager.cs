@@ -1,4 +1,7 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ProgressManager : MonoBehaviour
@@ -6,6 +9,7 @@ public class ProgressManager : MonoBehaviour
     private ObstacleManager obstacleManager;
     [SerializeField] private GameObject progressBar;
     [SerializeField] private float progressBarIncrement;
+    [SerializeField] private float eventInterval;
 
     public GameObject smallBirdPrefab;
     public GameObject largeBirdPrefab;
@@ -14,6 +18,9 @@ public class ProgressManager : MonoBehaviour
     public AudioClip windowThud;
     public AudioClip mudSplat;
     private AudioSource audioSource;
+    public HappinessScript happinessScript;
+
+    public SimonSays simonSays;
 
 
     public float timer = 0f;
@@ -32,6 +39,8 @@ public class ProgressManager : MonoBehaviour
     const int END_TIME = 645; bool endOn = false;
 
     public bool gameStart = false;
+
+    List<Action> possibleEvents = new List<Action>();
 
     private void Start()
     {
@@ -62,6 +71,24 @@ public class ProgressManager : MonoBehaviour
                 mudOn = true;
                 StartCoroutine(Mud());
             }
+
+            if (timer >= CHECKPOINT1_END && !check1On)
+            {
+                check1On = true;
+                StartCoroutine(BeginEvents());
+            }
+
+            if (timer >= SEAT_BELT_TIME && !seatBeltOn)
+            {
+                seatBeltOn = true;
+                happinessScript.StartButtonStuff();
+            }
+
+            if (timer >= SIMON_SAYS_TIME && !simonOn)
+            {
+                simonOn = true;
+                happinessScript.StartButtonStuff();
+            }
         }
     }
 
@@ -77,7 +104,7 @@ public class ProgressManager : MonoBehaviour
         {
             float spawnChance = 0.5f;
             float spawnChanceInterval = 2f;
-            if (Random.value < spawnChance)
+            if (UnityEngine.Random.value < spawnChance)
             {
                 obstacleManager.randomSpawn_GenericObstacle(obstacleManager.smallBird);
                 audioSource.PlayOneShot(windowThud);
@@ -92,7 +119,7 @@ public class ProgressManager : MonoBehaviour
         {
             float spawnChance = 0.35f;
             float spawnChanceInterval = 5f;
-            if (Random.value < spawnChance)
+            if (UnityEngine.Random.value < spawnChance)
             {
                 obstacleManager.randomSpawn_GenericObstacle(obstacleManager.bigBird);
                 audioSource.PlayOneShot(windowThud);
@@ -107,12 +134,22 @@ public class ProgressManager : MonoBehaviour
         {
             float spawnChance = 0.35f;
             float spawnChanceInterval = 5f;
-            if (Random.value < spawnChance)
+            if (UnityEngine.Random.value < spawnChance)
             {
                 obstacleManager.randomSpawn_GenericObstacle(obstacleManager.mud);
                 audioSource.PlayOneShot(mudSplat);
             }
             yield return new WaitForSeconds(spawnChanceInterval);
+        }
+    }
+
+    IEnumerator BeginEvents()
+    {
+        while (true)
+        {
+            int func = UnityEngine.Random.Range(0, possibleEvents.Count + 1);
+            possibleEvents[func]?.Invoke();
+            yield return new WaitForSeconds(eventInterval);
         }
     }
 

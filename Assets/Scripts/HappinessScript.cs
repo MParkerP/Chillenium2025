@@ -1,4 +1,6 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class HappinessScript : MonoBehaviour
@@ -9,10 +11,14 @@ public class HappinessScript : MonoBehaviour
     [SerializeField] private float incrementAmount;
     [SerializeField] private float happinessLevel = 100;
     [SerializeField] private float modifier = 1;
+    [SerializeField] private Slider slider;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        slider.maxValue = total;
+        slider.value = total;
+        decrementAmount = 0;
+        incrementAmount = 0;
     }
 
     // Update is called once per frame
@@ -45,23 +51,23 @@ public class HappinessScript : MonoBehaviour
     {
         if (seatBeltSign)
         {
-            happinessLevel -= decrementAmount;
+            slider.value -= decrementAmount;
         }
         else
         {
-            happinessLevel += incrementAmount;
+            slider.value += incrementAmount;
         }
     }
 
     private void Limits()
     {
-        if (happinessLevel > total)
+        if (slider.value > total)
         {
-            happinessLevel = total;
+            slider.value = total;
         }
-        if (happinessLevel < 0)
+        if (slider.value < 0)
         {
-            happinessLevel = 0;
+            slider.value = 0;
         }
     }
 
@@ -72,5 +78,11 @@ public class HappinessScript : MonoBehaviour
         {
             seatBeltSign = true;
         }
+    }
+
+    public void StartButtonStuff()
+    {
+        decrementAmount = 10;
+        incrementAmount = 10;
     }
 }
