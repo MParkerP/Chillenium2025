@@ -19,7 +19,7 @@ public class Eraseable : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Sponge"))
+        if (collision.gameObject.CompareTag("Sponge"))
         {
             audioSource.PlayOneShot(squeak);
             currentOpacity -= 0.2f;

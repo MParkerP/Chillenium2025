@@ -53,6 +53,7 @@ public class ProgressManager : MonoBehaviour
     List<Action> possibleEvents = new List<Action>();
 
     public GameObject WinCanvas;
+    public GameObject MainSplash;
 
     private void Start()
     {
@@ -62,6 +63,17 @@ public class ProgressManager : MonoBehaviour
 
         audioSource = GetComponent<AudioSource>();
         obstacleManager = GameObject.Find("ObstacleManager").GetComponent<ObstacleManager>();
+    }
+
+    public void StartGame()
+    {
+        StartCoroutine(SplashAnim());
+    }
+
+    IEnumerator SplashAnim()
+    {
+        yield return new WaitForSeconds(1.9f);
+        MainSplash.SetActive(false);
     }
 
     private void Update()
