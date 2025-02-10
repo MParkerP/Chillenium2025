@@ -20,6 +20,8 @@ public class ProgressManager : MonoBehaviour
 
     public SimonSays simonSays;
 
+
+   
     public void QuitGame()
     {
         Application.Quit();
@@ -27,7 +29,9 @@ public class ProgressManager : MonoBehaviour
     
     public void Restart()
     {
+        
         SceneManager.LoadScene("Main");
+        
     }
 
     public float timer = 0f;
@@ -57,6 +61,7 @@ public class ProgressManager : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1f;
         possibleEvents.Add(SpawnLargeBirdFlockEvent);
         possibleEvents.Add(SpawnSmallBirdFlockEvent);
         possibleEvents.Add(SpawnMudGroupEvent);
