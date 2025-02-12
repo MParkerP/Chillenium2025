@@ -17,4 +17,9 @@ public class FeatherScript : MonoBehaviour
     {
         
     }
+    private void OnMouseDown()
+    {
+        body.linearDamping = 0; body.angularDamping = 0;
+    }
+
 }

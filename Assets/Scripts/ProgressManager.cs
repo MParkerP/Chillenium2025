@@ -192,7 +192,7 @@ public class ProgressManager : MonoBehaviour
     {
         while (true)
         {
-            int func = UnityEngine.Random.Range(0, possibleEvents.Count + 1);
+            int func = UnityEngine.Random.Range(0, possibleEvents.Count);
             possibleEvents[func]?.Invoke();
             yield return new WaitForSeconds(eventInterval);
         }
