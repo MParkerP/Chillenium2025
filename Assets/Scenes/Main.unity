@@ -8475,7 +8475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 717151532}
-  maxDanger: 3000
+  maxDanger: 6000
   startingDanger: 0
   totalPassiveDangerFactor: 0
   passiveDangerScaler: 0.05
@@ -9224,7 +9224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progressBar: {fileID: 937992639}
   progressBarIncrement: 0.001
-  eventInterval: 0
+  eventInterval: 30
   windowThud: {fileID: 8300000, guid: 32c3b406c373719419b29003c5db0fee, type: 3}
   mudSplat: {fileID: 8300000, guid: ae590afa779a8574c836d0bde340fbba, type: 3}
   happinessScript: {fileID: 1136042925}

@@ -34,7 +34,7 @@ public class ProgressManager : MonoBehaviour
         
     }
 
-    public float timer = 0f;
+    public float timer = 30f;
 
 
     const int SMALL_BIRD_TIME = 0; bool smallBirdOn = false;

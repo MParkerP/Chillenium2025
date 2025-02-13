@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -453032697125754536}
   - component: {fileID: -3673536662102512831}
   - component: {fileID: -2503568139441227185}
+  - component: {fileID: -6318917785486254942}
   m_Layer: 7
   m_Name: Mud
   m_TagString: Untagged
@@ -270,3 +271,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-6318917785486254942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2572990117801504701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0780d72b28c4934d8675b7cd2318ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  passiveDangerFactor: 15
