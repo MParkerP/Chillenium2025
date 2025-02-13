@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using Unity.VisualScripting;
 public class SimonSays : MonoBehaviour
 {
     /*
@@ -26,6 +27,7 @@ public class SimonSays : MonoBehaviour
     {
         InputSequence = "";
         sequence = generateSequence();
+        lowerAll();
         //raiseAll();
     }
 
@@ -48,6 +50,7 @@ public class SimonSays : MonoBehaviour
 
     public void recieveInput(string color)
     {
+        if (!enabled) { return; }
         InputSequence += color;
         if (InputSequence.Length >= simonLength)
         {
@@ -67,8 +70,6 @@ public class SimonSays : MonoBehaviour
         if (string.Equals(input, sequence.Substring(0, input.Length)))
         {
             if (input.Length == simonLength) { win(); }
-            Debug.Log(input.Length - 1);
-            Debug.Log(input);
             lower(input[input.Length-1]);
            
             return;
@@ -123,6 +124,13 @@ public class SimonSays : MonoBehaviour
         d.raise();
     }
 
+    private void lowerAll()
+    {
+        t.lower();
+        s.lower();
+        c.lower();
+        d.lower();
+    }
 
     IEnumerator flashSequence()
     {
