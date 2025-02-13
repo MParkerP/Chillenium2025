@@ -10,7 +10,7 @@ public class ShapeButton : MonoBehaviour
     public void OnMouseDown()
     {
         simon.recieveInput(name);
-        lower();
+        //lower();
     }
 
     public void raise()
@@ -20,7 +20,7 @@ public class ShapeButton : MonoBehaviour
             animator.SetBool("down", false);
         }
     }
-    void lower()
+    public void lower()
     {
         if (animator != null)
         {

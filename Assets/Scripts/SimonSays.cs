@@ -26,7 +26,7 @@ public class SimonSays : MonoBehaviour
     {
         InputSequence = "";
         sequence = generateSequence();
-        raiseAll();
+        //raiseAll();
     }
 
 
@@ -67,7 +67,10 @@ public class SimonSays : MonoBehaviour
         if (string.Equals(input, sequence.Substring(0, input.Length)))
         {
             if (input.Length == simonLength) { win(); }
-
+            Debug.Log(input.Length - 1);
+            Debug.Log(input);
+            lower(input[input.Length-1]);
+           
             return;
 
         }
@@ -78,6 +81,23 @@ public class SimonSays : MonoBehaviour
 
     }
 
+    private void lower(char letter)
+    {
+        switch(letter){
+            case 's':
+                s.lower();
+                break;
+            case 't':
+                t.lower();
+                break;
+            case 'd':
+                d.lower();
+                break;
+            case 'c':
+                c.lower();
+                break;
+        }
+    }
     private void win()
     {
         //keep buttons depressed

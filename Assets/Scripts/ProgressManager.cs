@@ -34,7 +34,7 @@ public class ProgressManager : MonoBehaviour
         
     }
 
-    public float timer = 30f;
+    public float timer = 0f;
 
 
     const int SMALL_BIRD_TIME = 0; bool smallBirdOn = false;
@@ -43,7 +43,7 @@ public class ProgressManager : MonoBehaviour
     const int CHECKPOINT1_END = 90; bool check1On = false;
 
     const int SEAT_BELT_TIME = 150; bool seatBeltOn = false;
-    const int SIMON_SAYS_TIME = 165; bool simonOn = false;
+    const int SIMON_SAYS_TIME = 10; bool simonOn = false;
 
     const int END_GAME_TIME = 285; bool gameWon = false;
 
